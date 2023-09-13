@@ -11,3 +11,7 @@ jobs:
           node-version: "18"
       - run: npm install -g bats
       - run: bats -v
+      - name: Run a script
+        run: ./my-script.sh
+      - name: Run another script
+        run: ./my-other-script.sh
