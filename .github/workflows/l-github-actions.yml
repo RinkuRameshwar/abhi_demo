@@ -1,0 +1,13 @@
+name: My First Action
+run-name: Actor - ${{github.actor }} name - {{github.name}} this is runer property
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: action/setup-node@v3
+        with:
+          node-version: "18"
+      - run: npm install -g bats
+      - run: bats -v
