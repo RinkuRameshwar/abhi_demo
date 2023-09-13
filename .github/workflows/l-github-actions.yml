@@ -1,5 +1,5 @@
 name: My First Action
-run-name: Actor - ${{github.actor }} name - {{github.name}} this is runer property
+run-name: Actor - ${{github.actor }} name - ${{github.name}} this is runer property
 on: [push]
 jobs:
   check-bats-version:
@@ -12,6 +12,6 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
       - name: Run a script
-        run: ./my-script.sh
+        run: my-script.sh
       - name: Run another script
         run: ./my-other-script.sh
